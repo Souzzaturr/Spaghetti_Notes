@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %} Spaghetti notes {% endblock %}
+
+{% block content %}
+
+    <h2 class="titulo_conteudo_principal">Receitas</h2>
+
+    {% if lista_posts %}
+        {% for titulo, conteudo, usuario in lista_posts %}
+
+            <div class="post">
+                <h3>{{ titulo }}</h3>
+                <p>{{ conteudo[:100] + "..." }}</p>
+                <p>{{ usuario }}</p>
+            </div>
+
+        {% endfor %}
+    
+    {% else %}
+            <p> Parece que ainda não foi postada nenhuma receita...</p>
+    
+    {% endif %}
+
+{% endblock %}
