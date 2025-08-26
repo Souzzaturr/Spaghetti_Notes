@@ -1,3 +1,3 @@
 from . import usuario_bp
 
-@usuario_bp.route("/perfil")
+#@usuario_bp.route("/perfil")

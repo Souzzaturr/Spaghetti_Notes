@@ -13,7 +13,7 @@ def verificar_usuario (usuario: str) -> bool:
 
     lista_usuarios = list()
 
-    with open("../../data/users_data.csv", "r", encoding = "UTF-8") as users_data:
+    with open("data/users_data.csv", "r", encoding = "UTF-8") as users_data:
 
         for usuario in users_data.read().splitlines()[1:]:
             lista_usuarios.append(usuario[0])
@@ -26,7 +26,7 @@ def verificar_senha (usuario: str, senha: str) -> bool:
 
     senha_tah_correta = False
 
-    with open ("../../data/users_data.csv", "r", encoding = "UTF-8") as users_data:
+    with open ("data/users_data.csv", "r", encoding = "UTF-8") as users_data:
 
         for user in users_data.read().splitlines()[1:]:
             
