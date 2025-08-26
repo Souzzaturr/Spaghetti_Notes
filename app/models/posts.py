@@ -21,7 +21,7 @@ def criar_post (titulo: str, conteudo: str, usuario: str):
     titulo_tratado = data_treatment.tratar_texto_post(titulo)
     conteudo_tratado = data_treatment.tratar_texto_post(conteudo)
 
-    with open("../../data/posts_data.csv", "a", encoding = "UTF-&") as posts_data:
+    with open("../../data/posts_data.csv", "a", encoding = "UTF-8") as posts_data:
 
         posts_data.write(f"{titulo_tratado},{conteudo_tratado},{usuario}\n")
     
@@ -37,7 +37,7 @@ def deletar_post(titulo: str, conteudo: str, usuario: str):
     lista_linhas = []
 
     # lê o arquivo uma única vez
-    with open("../../data/posts_data.csv", "r", encoding="utf-8") as posts_data:
+    with open("../../data/posts_data.csv", "r", encoding="UTF-8") as posts_data:
         linhas = posts_data.read().splitlines()
 
     if linhas:  # verifica se não está vazio
@@ -50,7 +50,7 @@ def deletar_post(titulo: str, conteudo: str, usuario: str):
                 lista_linhas.append(post)
 
     # reescreve o arquivo
-    with open("../../data/posts_data.csv", "w", encoding="utf-8") as posts_data:
+    with open("../../data/posts_data.csv", "w", encoding="UTF-8") as posts_data:
         for linha in lista_linhas:
             posts_data.write(linha + "\n")
 

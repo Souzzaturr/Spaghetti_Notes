@@ -26,4 +26,16 @@ def criar_usuario (nome: str, senha: str) -> None:
 
 #---
 
-#def verificar_usuario (usuario: str, senha: str) -> bool:
+#verifica se há apenas caracteres permitidos no nome de usuario
+def nome_usuario_caracteres_permitidos (usuario: str) -> bool:
+    
+    for caractere in usuario:
+
+        #verificar se o caractere não é letra, numero ou underline
+        if ord(caractere) < 48 or ord(caractere) > 57 or ord(caractere) < 65 or ord(caractere) > 90 or ord(caractere) < 95 or ord(caractere) > 95 or ord(caractere) < 97 or ord(caractere) > 122:
+
+            return False
+    
+    return True
+
+#---
