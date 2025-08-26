@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="mainhtml.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina principal</title>
+</head>
+<body>
+    <header>
+        <h1>Spaghetti notes</h1>
+        <img src="placeholder.png" width='50px'>  
+    </header>
+    <nav class="navbar">
+        <ul class='ul_navbar'>
+            <li><a href=''>Pagina inicial</a></li>
+            <li><a href='login.html'>Login</a></li>
+            <li><a href='sobre.html'>Sobre</a></li>
+            <li><a href=''>Postar receita</a></li>
+        </ul>
+    </nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <article>
+            <section class='bloco_creditos'>
+                <h3>Creditos</h3>
+                <ul>
+                    <li>Josué Neto</li>
+                    <li>Gerson Rocha</li>
+                    <li>Arthur Souza</li>
+                </ul>
+            </section>
+            <section class="bloco_contatos">
+                <h3>Contatos</h3>
+                <ul>
+                    <li>Whatsapp:</li>
+                    <li>Telefone:</li>
+                    <li>Email:</li>
+                </ul>
+            </section>
+        </article>
+        <p>©todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
