@@ -4,4 +4,4 @@ from . import main_bp
 #página inicial
 @main_bp.route('/')
 def inicial ():
-    return "Hello World"
+    return render_template("inicio.html")

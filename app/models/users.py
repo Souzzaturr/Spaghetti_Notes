@@ -1,10 +1,10 @@
-import security
+from . import security
 
 #---
 
 def iniciar_users_data ():
 
-    with open("../../data/users_data.csv", "a+", encoding = "UTF-8") as users_data:
+    with open("data/users_data.csv", "a+", encoding = "UTF-8") as users_data:
 
         users_data.seek(0)
         
