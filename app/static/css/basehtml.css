@@ -61,8 +61,8 @@ main {
     text-align: center;
     margin: 2em 0;
     justify-self: center;
-    background-color: rgb(194, 194, 194);
-    border: rgba(165, 165, 165, 0.315) solid 2px;
+    background-color: beige;
+    border: rgb(207, 207, 187) solid 2px;
     border-radius: 0.5em;
     width: 80%;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.158);
@@ -132,8 +132,8 @@ main {
 
 .unidade_bloco {
     padding: 3em 2em;
-    background-color: rgb(194, 194, 194);
-    border: rgba(119, 119, 119, 0.315) solid 2px;
+    background-color: beige;
+    border: rgb(207, 207, 187) solid 2px;
     border-radius: 0.5em;
     width: 200px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.158);
