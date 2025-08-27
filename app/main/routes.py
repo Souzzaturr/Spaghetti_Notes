@@ -1,4 +1,4 @@
-from flask import render_template, current_app, request
+from flask import render_template, current_app, request, session
 from ..models import posts
 from . import main_bp
 
