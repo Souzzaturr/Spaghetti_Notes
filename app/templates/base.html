@@ -8,14 +8,14 @@
 </head>
 <body>
     <header class="cabecalho">
-        <a class="logo_site" href="">
+        <a class="logo_site" href="{{ url_for('main.inicial') }}">
         <h1>Spaghetti notes</h1>
         <img src="{{ url_for('static', filename = 'imgs/placeholder.png') }}" width='50px'>
         </a>
     </header>
     <nav>
         <ul class='navbar'>
-            <li class = "menus_navbar"><a class = "link" href=''>Pagina inicial</a></li>
+            <li class = "menus_navbar"><a class = "link" href='{{ url_for("main.inicial") }}'>Pagina inicial</a></li>
             <li class = "menus_navbar"><a class = "link" href='login.html'>Login</a></li>
             <li class = "menus_navbar"><a class = "link" href='sobre.html'>Sobre</a></li>
             <li class = "menus_navbar"><a class = "link" href=''>Postar receita</a></li>

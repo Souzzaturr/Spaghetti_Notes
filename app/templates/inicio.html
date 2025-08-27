@@ -4,22 +4,30 @@
 
 {% block content %}
 
-    <h2 class="titulo_conteudo_principal">Receitas</h2>
+    <h2 class="titulo_conteudo">Receitas</h2>
 
-    {% if lista_posts %}
-        {% for titulo, conteudo, usuario in lista_posts %}
+    <div class="blocos">
+        {% if lista_posts %}
+        
+            {% for titulo, conteudo, usuario in lista_posts %}
 
-            <div class="post">
-                <h3>{{ titulo }}</h3>
-                <p>{{ conteudo[:100] + "..." }}</p>
-                <p>{{ usuario }}</p>
-            </div>
+                <a class = "link" href=" {{ url_for('main.receita', titulo = titulo, conteudo = conteudo, usuario = usuario) }}">
+                    <div class="unidade_bloco">
 
-        {% endfor %}
-    
-    {% else %}
-            <p> Parece que ainda não foi postada nenhuma receita...</p>
-    
-    {% endif %}
+                        <h3 class="titulo_conteudo">{{ titulo }}</h3>
+
+                        <p class="conteudo">{{ conteudo[:48] + "..." }}</p>
+
+                        <p>{{ usuario }}</p>
+
+                    </div>
+                </a>
+
+            {% endfor %}
+        
+        {% else %}
+        
+        {% endif %}
+    </div>
 
 {% endblock %}

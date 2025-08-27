@@ -15,7 +15,7 @@ body {
 
 .cabecalho {
     padding: 1em 0;
-    background: linear-gradient(45deg, #ffd900, rgb(250, 195, 14));
+    background: linear-gradient(45deg, #ffd900, #fac30e);
     grid-row: 1/2;
 }
 
@@ -54,14 +54,32 @@ body {
 
 main {
     grid-row: 3/4;
-    background-color: white;
+    background-color: #ffddaf;
 }
 
-.post {
-    padding: 2em 4em;
-    background-color: rgba(128, 128, 128, 0.404);
-    border: rgba(119, 119, 119, 0.315) solid 2px;
+.receita_pagina {
+    text-align: center;
+    margin: 2em 0;
+    justify-self: center;
+    background-color: rgb(194, 194, 194);
+    border: rgba(165, 165, 165, 0.315) solid 2px;
     border-radius: 0.5em;
+    width: 80%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.158);
+}
+
+.titulo_conteudo {
+    padding: 2em;
+}
+
+.conteudo {
+    padding: 2em 0;
+    align-self: center;
+    overflow-wrap: break-word;
+}
+
+.credito_receitas {
+    padding: 2em 0;
 }
 
 
@@ -94,6 +112,31 @@ main {
     color: black;
     text-decoration: none;
     font-weight: bolder;
+    text-wrap: wrap;
+}
+
+.botao {
+    padding: 1em 2em;
+    margin: 2em 0;
+    background-color: #f5d20b;
+    border: #e9c602 solid 2px;
+    border-radius: 0.5em;
+}
+
+.blocos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    padding: 2em;
+}
+
+.unidade_bloco {
+    padding: 3em 2em;
+    background-color: rgb(194, 194, 194);
+    border: rgba(119, 119, 119, 0.315) solid 2px;
+    border-radius: 0.5em;
+    width: 200px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.158);
 }
 
 
@@ -102,4 +145,12 @@ main {
 
 .menus_navbar:hover {
     background-color: rgb(236, 185, 117)
+}
+
+.unidade_bloco:hover {
+    background-color: #bdbdbd;
+}
+
+.botao:hover {
+    background-color: #eeca01;
 }

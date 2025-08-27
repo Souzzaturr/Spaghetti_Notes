@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ titulo }} {% endblock %}
+
+{% block content %}
+
+    <section class="receita_pagina">
+        <h2 class="titulo_conteudo"> {{ titulo }} </h2>
+
+        <p class="conteudo"> {{ conteudo }} </p>
+
+        <p class="credito_receitas"> Feito por <cite> {{ usuario }}</cite></p>
+
+        <p> Veja mais receitas em nossa página inicial!!</p>
+
+        <a href="{{ url_for('main.inicial') }}">
+            <button class="botao">Ver mais</button>
+        </a>
+    </section>
+
+{% endblock %}
