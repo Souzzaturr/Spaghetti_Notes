@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %} Login {% endblock %}
+
+{% block content %}
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+
+        {% if messages %}
+
+            {% for category, message in messages %}
+
+                <div class="{{ category }}">
+                    <p>{{ message }}</p>
+                </div>
+            
+            {% endfor %}
+        
+        {% endif %}
+    
+    {% endwith %}
+
+
+    <section class="bloco_pagina">
+
+        <h2 class="titulo_conteudo"> Login </h2>
+
+        <form action="{{ url_for('usuario.login') }}" method="post">
+
+            <div class="form">
+                <label class="etiqueta_input" for="nome">Insira seu nome abaixo:</label>
+                <input type="text" maxlength="20" name="nome" id="nome" placeholder="Seu nome aqui..." required>
+            </div>
+
+            <div class="form">
+                <label class="etiqueta_input" for="senha">Insira sua senha abaixo:</label>
+                <input type="password" maxlength="20" name="senha" id="senha" placeholder="Sua senha aqui..." required>
+            </div>
+
+            <button class="botao"> Entrar </button>
+
+        </form>
+
+        <p class="conteudo"> Ainda não possui cadastro? Que tal realizar agora mesmo!</p>
+
+        <p> Clique no botão abaixo!</p>
+
+        <a href="{{ url_for('usuario.cadastro')}}">
+            <button class="botao">Cadastro</button>
+        </a>
+
+    </section>
+
+{% endblock %}

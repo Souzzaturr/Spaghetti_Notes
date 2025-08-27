@@ -57,7 +57,7 @@ main {
     background-color: #ffddaf;
 }
 
-.receita_pagina {
+.bloco_pagina {
     text-align: center;
     margin: 2em 0;
     justify-self: center;
@@ -144,6 +144,42 @@ main {
     text-align: center;
 }
 
+input {
+    padding: 1em 3em;
+    border: rgba(0, 0, 0, 0.212) solid 1px;
+    border-radius: 0.5em;
+    width: 20%;
+}
+
+.form {
+    padding: 1em 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+}
+
+.success {
+    justify-self: center;
+    padding: 1em;
+    margin: 0.5em;
+    background-color: rgba(172, 255, 47, 0.712);
+    border: green solid 2px;
+    color: rgb(0, 83, 0);
+    border-radius: 0.5em;
+    width: 80%;
+}
+
+.danger {
+    justify-self: center;
+    padding: 1em;
+    margin: 0.5em;
+    background-color: rgba(255, 47, 47, 0.712);
+    border: red solid 2px;
+    color: rgb(128, 0, 0);
+    border-radius: 0.5em;
+    width: 80%;
+}
 
 
 /* hover */
@@ -153,7 +189,7 @@ main {
 }
 
 .unidade_bloco:hover {
-    background-color: #bdbdbd;
+    background-color: rgb(235, 235, 211);
 }
 
 .botao:hover {
