@@ -6,7 +6,7 @@ from . import admin_bp
 def admin ():
 
     if "usuario" in session.keys():
-        if session["usuario"] == "Artur_ADM":
+        if session["usuario"] == "Artur_ADM" or session["usuario"] == "Josue_ADM" or session["usuario"] == "Gerson_ADM":
 
             usuarios_posts = posts.posts_por_usuario()
 
