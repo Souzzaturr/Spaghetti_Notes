@@ -33,3 +33,52 @@ O **Spaghetti Notes** é um site de receitas que possui as seguintes funcionalid
 ## 🚀 Nome do Projeto  
 **Spaghetti Notes**  
 Um espaço digital para compartilhar, organizar e criar receitas de forma simples, intuitiva e colaborativa.
+
+
+Perfeito! Aqui está uma seção em Markdown **apenas sobre como rodar o projeto**, seguindo exatamente o que você pediu:
+
+---
+
+## 💻 Como Rodar o Projeto
+
+Siga os passos abaixo para executar o **Spaghetti Notes** localmente:
+
+### 1. Clonar o repositório
+```bash
+git clone <URL_DO_REPOSITORIO>
+cd spaghetti-notes
+````
+
+### 2. Criar um ambiente virtual
+
+```bash
+python -m venv venv
+```
+
+### 3. Ativar o ambiente virtual
+
+* **Windows**:
+
+```bash
+venv\Scripts\activate
+```
+
+* **Linux/MacOS**:
+
+```bash
+source venv/bin/activate
+```
+
+### 4. Instalar as dependências
+
+```bash
+pip install -r requirements.txt
+```
+
+### 5. Rodar a aplicação
+
+```bash
+python app.py
+```
+
+A aplicação estará disponível em `http://127.0.0.1:5000/`.
