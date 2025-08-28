@@ -27,9 +27,14 @@ def receita (titulo: str):
 
     conteudo = request.args.get("conteudo")
     
-    usuario = request.args.get("usuario")
+    usuario_receita = request.args.get("usuario")
 
-    return render_template("receita.html", titulo = titulo, conteudo = conteudo, usuario = usuario)
+    if "usuario" in session.keys():
+
+        return render_template("receita.html", titulo = titulo, conteudo = conteudo, usuario_receita = usuario_receita, usuario = session["usuario"])
+
+
+    return render_template("receita.html", titulo = titulo, conteudo = conteudo, usuario_receita = usuario_receita)
 
 
 @main_bp.route("/sobre")
