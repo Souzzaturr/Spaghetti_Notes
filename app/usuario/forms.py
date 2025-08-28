@@ -7,6 +7,11 @@ from . import usuario_bp
 @usuario_bp.route("/login", methods = ["GET", "POST"])
 def login ():
 
+    if "usuario" in session.keys():
+        flash("Você não pode acessar essa página, você já está logado!!", "danger")
+
+        return redirect(url_for("usuario.perfil"))
+
     if request.method == "POST":
 
         usuario = request.form.get("nome")
@@ -43,6 +48,11 @@ def login ():
 
 @usuario_bp.route("/cadastro", methods = ["GET", "POST"])
 def cadastro ():
+
+    if "usuario" in session.keys():
+        flash("Você não pode acessar essa página, você já está logado!!", "danger")
+
+        return redirect(url_for("usuario.perfil"))
 
     if request.method == "POST":
 
