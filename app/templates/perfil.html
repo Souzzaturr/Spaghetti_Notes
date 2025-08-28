@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %} Spaghetti notes {% endblock %}
+{% block title %} {{ usuario }} - perfil{% endblock %}
 
 {% block content %}
 
@@ -20,7 +20,8 @@
     
     {% endwith %}
 
-    <h2 class="titulo_conteudo">Receitas</h2>
+    
+    <h2 class="titulo_conteudo">Suas receitas:</h2>
 
     {% if lista_posts %}
     
@@ -40,20 +41,32 @@
                 </a>
 
             {% endfor %}
+
+        </div>
+        <div class="centralizar_bloco">
+            <p class="conteudo"> Não conhece {{ usuario }}?</p>
+
+            <p> Faça logout e entre com sua conta!!</p>
+
+            <form action="{{ url_for('main.inicial') }}" method="post">
+                <input type="hidden" name="from_perfil_user" value="logout">
+                <button class="botao"> Logout </button>
+            </form>
         </div>
         
-        {% else %}
+    {% else %}
                 
             <div class="mensagem_central">
-                <p class="conteudo"> Parece que ninguem postou uma receita ainda...</p>
+                <p class="conteudo"> Caramba {{ usuario }}, parece que você ainda não postou uma receita...</p>
 
-                <p class="conteudo"> Quer ser o primeiro?</p>
+                <p class="conteudo"> Gostaria de postar sua primeira receita?</p>
 
-                <a href="">
+                <a href="{{ url_for('main.postar_receita') }}">
                     <button class="botao">Criar receita</button>
                 </a>
             </div>
         
-        {% endif %}
+    {% endif %}
+
 
 {% endblock %}

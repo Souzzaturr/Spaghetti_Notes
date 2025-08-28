@@ -22,7 +22,7 @@ def login ():
 
                 flash("Login realizado com sucesso!", "success")
 
-                return redirect(url_for('main.inicial'))
+                return redirect(url_for('usuario.perfil'))
             
             
             flash("Senha incorreta", "danger")

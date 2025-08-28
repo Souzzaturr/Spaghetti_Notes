@@ -71,3 +71,22 @@ def exibir_posts_in_lista () -> list:
             lista_posts.append(post)
     
     return lista_posts
+
+#---
+
+def exibir_posts_usuario (usuario: str) -> list:
+    
+    lista_posts = list()
+
+    with open("data/posts_data.csv", "r", encoding = "UTF-8") as posts_data:
+        
+        for post in posts_data.read().splitlines()[1:]:
+            post = post.split(",")
+            
+            for i in range(2):
+                post[i] = data_treatment.reverter_tratamento_texto_post(post[i])
+            
+            if post[2] == usuario:
+                lista_posts.append(post)
+    
+    return lista_posts

@@ -12,13 +12,25 @@
         <h1>Spaghetti notes</h1>
         <img src="{{ url_for('static', filename = 'imgs/placeholder.png') }}" width='50px'>
         </a>
+
+        {% if usuario %}
+            <a class="link" class="nome_cabecalho" href="{{ url_for('usuario.perfil') }}">
+                <h1 class="nome_cabecalho">{{ usuario }}</h1>
+            </a>
+        {% endif %}
     </header>
     <nav>
         <ul class='navbar'>
             <li class = "menus_navbar"><a class = "link" href='{{ url_for("main.inicial") }}'>Pagina inicial</a></li>
-            <li class = "menus_navbar"><a class = "link" href='{{ url_for("usuario.login") }}'>Login</a></li>
             <li class = "menus_navbar"><a class = "link" href='sobre.html'>Sobre</a></li>
-            <li class = "menus_navbar"><a class = "link" href=''>Postar receita</a></li>
+
+            {% if usuario %}
+                <li class = "menus_navbar"><a class = "link" href='{{ url_for("usuario.perfil") }}'>Perfil</a></li>
+            {% else %}
+                <li class = "menus_navbar"><a class = "link" href='{{ url_for("usuario.login") }}'>Login</a></li>
+            {% endif %}
+
+            <li class = "menus_navbar"><a class = "link" href='{{ url_for("main.postar_receita") }}'>Postar receita</a></li>
         </ul>
     </nav>
     <main>

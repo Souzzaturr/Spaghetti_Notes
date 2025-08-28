@@ -1,13 +1,23 @@
-from flask import render_template, current_app, request, session
+from flask import render_template, current_app, request, session, flash
 from ..models import posts
 from . import main_bp
 
 #página inicial
-@main_bp.route('/')
+@main_bp.route('/', methods = ["GET", "POST"])
 def inicial ():
+
+    if request.method == "POST":
+
+        if request.form.get("from_perfil_user") == "logout":
+
+            del session["usuario"]
 
     lista_posts = posts.exibir_posts_in_lista()
 
+    if "usuario" in session.keys():
+        
+        return render_template("inicio.html", lista_posts = lista_posts, usuario = session["usuario"])
+    
     return render_template("inicio.html", lista_posts = lista_posts)
 
 
