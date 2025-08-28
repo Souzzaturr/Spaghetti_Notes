@@ -180,6 +180,29 @@ main {
     row-gap: 2em;
 }
 
+.tabela {
+    justify-self: center;
+    border-collapse: collapse;
+    margin: 2em 0;
+    width: 80%;
+    border: 2px solid #e2b10d;
+    border-radius: 1em;
+}
+
+th {
+    background-color: #fac30e;
+    text-align: center;
+    padding: 1em;
+}
+
+td {
+    padding: 1em;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(230, 230, 230);
+}
+
 .area_de_texto {
     border: rgba(0, 0, 0, 0.212) solid 1px;
     border-radius: 0.5em;
