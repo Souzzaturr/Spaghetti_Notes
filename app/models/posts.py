@@ -90,3 +90,21 @@ def exibir_posts_usuario (usuario: str) -> list:
                 lista_posts.append(post)
     
     return lista_posts
+
+#---
+
+def posts_por_usuario () -> dict:
+
+    usuarios = dict()
+
+    with open("data/posts_data.csv", "r", encoding = "UTF-8") as posts_data:
+
+        for post in posts_data.read().splitlines()[1:]:
+
+            if post.split(",")[2] in usuarios.keys():
+                usuarios[post.split(",")[2]] += 1
+            
+            else:
+                usuarios[post.split(",")[2]] = 1
+    
+    return usuarios
