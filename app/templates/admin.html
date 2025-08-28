@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %} ADM {% endblock %}
+
+{% block content %}
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+
+        {% if messages %}
+
+            {% for category, message in messages %}
+
+                <div class="{{ category }}">
+                    <p>{{ message }}</p>
+                </div>
+            
+            {% endfor %}
+        
+        {% endif %}
+    
+    {% endwith %}
+
+    
+    <section class="bloco_pagina">
+        <h2 class="titulo_conteudo">Monitoramento</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Usuario</th>
+                    <th>Quantidade de posts</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if usuarios_posts %}
+                    {% for chave in usuarios_posts.keys() %}
+                        <tr>
+                            <td>{{ chave }}</td>
+                            <td>{{ usuarios_posts[chave] }}</td>
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="2">Não há usuários cadastrados...</td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </section>
+
+{% endblock %}

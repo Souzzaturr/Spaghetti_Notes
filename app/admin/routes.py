@@ -10,7 +10,7 @@ def admin ():
 
             flash("Seja bem vindo... ADM SUPREMO!!", "success")
 
-            return render_template("admin.html")
+            return render_template("admin.html", usuario = session["usuario"])
 
 
     flash("Você não tem acesso à essa pagina!!", "danger")
