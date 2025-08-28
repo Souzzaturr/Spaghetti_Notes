@@ -22,7 +22,7 @@
     <nav>
         <ul class='navbar'>
             <li class = "menus_navbar"><a class = "link" href='{{ url_for("main.inicial") }}'>Pagina inicial</a></li>
-            <li class = "menus_navbar"><a class = "link" href='sobre.html'>Sobre</a></li>
+            <li class = "menus_navbar"><a class = "link" href='{{ url_for("main.sobre") }}'>Sobre</a></li>
 
             {% if usuario %}
                 <li class = "menus_navbar"><a class = "link" href='{{ url_for("usuario.perfil") }}'>Perfil</a></li>
