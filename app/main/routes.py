@@ -30,3 +30,8 @@ def receita (titulo: str):
     usuario = request.args.get("usuario")
 
     return render_template("receita.html", titulo = titulo, conteudo = conteudo, usuario = usuario)
+
+
+@main_bp.route("/sobre")
+def sobre ():
+    return render_template("sobre.html")
