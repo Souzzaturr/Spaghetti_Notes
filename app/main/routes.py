@@ -34,4 +34,10 @@ def receita (titulo: str):
 
 @main_bp.route("/sobre")
 def sobre ():
+
+    if "usuario" in session.keys():
+        
+        return render_template("sobre.html", usuario = session["usuario"])
+    
+    
     return render_template("sobre.html")

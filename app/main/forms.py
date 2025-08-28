@@ -25,5 +25,10 @@ def postar_receita ():
         flash("Você precisa estar logado para criar um post de receita!!", "danger")
 
         return redirect(url_for("main.postar_receita"))
+    
+    
+    if "usuario" in session.keys():
 
+        return render_template("postar_receita.html",usuario = session["usuario"])
+    
     return render_template("postar_receita.html")

@@ -45,13 +45,15 @@
 
         </form>
 
-        <p class="conteudo"> Ainda não possui cadastro? Que tal realizar agora mesmo!</p>
+        {% if not usuario %}
+            <p class="conteudo"> Ainda não possui cadastro? Que tal realizar agora mesmo!</p>
 
-        <p> Clique no botão abaixo!</p>
+            <p> Clique no botão abaixo!</p>
 
-        <a href="{{ url_for('usuario.cadastro')}}">
-            <button class="botao">Cadastro</button>
-        </a>
+            <a href="{{ url_for('usuario.cadastro')}}">
+                <button class="botao">Cadastro</button>
+            </a>
+        {% endif %}
 
     </section>
 
