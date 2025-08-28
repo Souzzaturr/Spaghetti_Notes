@@ -38,4 +38,17 @@ def nome_usuario_caracteres_permitidos (usuario: str) -> bool:
     
     return True
 
+
 #---
+
+def listar_usuarios () -> list:
+
+    lista_usuarios = list()
+
+    with open ("data/users_data.csv", "r", encoding = "UTF-8") as users_data:
+
+        for nome in users_data.read().splitlines()[1:]:
+
+            lista_usuarios.append(nome.split(",")[0])
+    
+    return lista_usuarios
