@@ -1,7 +1,7 @@
 # 🍝 Spaghetti Notes
 
 ## 📖 Introdução  
-Este projeto foi desenvolvido para as disciplinas de **Programação para Web I** e **Introdução a Algoritmos**, com o objetivo de aplicar na prática os conceitos fundamentais de desenvolvimento web, organização de código e estruturação de aplicações dinâmicas.  
+Este projeto foi desenvolvido para as disciplinas de **Programação para Web I** e **Introdução a Algoritmos**, do curso de Bacharelado em **Engenharia de Software** do **IFPB** com o objetivo de aplicar na prática os conceitos fundamentais de desenvolvimento web, organização de código e estruturação de aplicações dinâmicas.  
 A aplicação proposta consiste em um site de receitas, funcionando de forma semelhante a um blog, no qual usuários podem interagir e compartilhar conteúdos.
 
 ---
@@ -33,9 +33,6 @@ O **Spaghetti Notes** é um site de receitas que possui as seguintes funcionalid
 ## 🚀 Nome do Projeto  
 **Spaghetti Notes**  
 Um espaço digital para compartilhar, organizar e criar receitas de forma simples, intuitiva e colaborativa.
-
-
-Perfeito! Aqui está uma seção em Markdown **apenas sobre como rodar o projeto**, seguindo exatamente o que você pediu:
 
 ---
 
