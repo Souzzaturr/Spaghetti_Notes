@@ -1,4 +1,4 @@
-from . import data_treatment
+from . import data_treatment, users
 
 
 #---
@@ -97,14 +97,13 @@ def posts_por_usuario () -> dict:
 
     usuarios = dict()
 
+    for nome in users.listar_usuarios():
+        usuarios[nome] = 0
+
     with open("data/posts_data.csv", "r", encoding = "UTF-8") as posts_data:
 
         for post in posts_data.read().splitlines()[1:]:
 
-            if post.split(",")[2] in usuarios.keys():
-                usuarios[post.split(",")[2]] += 1
-            
-            else:
-                usuarios[post.split(",")[2]] = 1
+            usuarios[post.split(",")[2]] += 1
     
     return usuarios
