@@ -2,4 +2,4 @@ __pycache__
 venv
 posts_data.csv
 users_data.csv
-basehtmlcss.txt
+.gitkeep
