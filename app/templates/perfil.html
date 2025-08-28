@@ -42,6 +42,21 @@
 
             {% endfor %}
 
+            
+            {% else %}
+            
+            <div class="mensagem_central">
+                <p class="conteudo"> Caramba {{ usuario }}, parece que você ainda não postou uma receita...</p>
+
+                <p class="conteudo"> Gostaria de postar sua primeira receita?</p>
+
+                <a href="{{ url_for('main.postar_receita') }}">
+                    <button class="botao">Criar receita</button>
+                </a>
+            </div>
+            
+            {% endif %}
+            
         </div>
         <div class="centralizar_bloco">
             <p class="conteudo"> Não conhece {{ usuario }}?</p>
@@ -53,20 +68,5 @@
                 <button class="botao"> Logout </button>
             </form>
         </div>
-        
-    {% else %}
-                
-            <div class="mensagem_central">
-                <p class="conteudo"> Caramba {{ usuario }}, parece que você ainda não postou uma receita...</p>
-
-                <p class="conteudo"> Gostaria de postar sua primeira receita?</p>
-
-                <a href="{{ url_for('main.postar_receita') }}">
-                    <button class="botao">Criar receita</button>
-                </a>
-            </div>
-        
-    {% endif %}
-
-
+            
 {% endblock %}
