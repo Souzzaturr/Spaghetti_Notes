@@ -4,14 +4,9 @@
     font-family: sans-serif;
 }
 
-html, body {
-    height: 100%;
-}
-
 body {
     display: grid;
     grid-template-rows: auto auto auto auto;
-    min-height: 100vh;
 }
 
 
@@ -65,6 +60,7 @@ body {
 main {
     grid-row: 3/4;
     background-color: #ffddaf;
+    min-height: 75vh;
 }
 
 .bloco_pagina {
