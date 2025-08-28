@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 
-{% block title %} Login {% endblock %}
+{% block title %} Postar receita {% endblock %}
 
 {% block content %}
+
 
     {% with messages = get_flashed_messages(with_categories=true) %}
 
@@ -23,21 +24,24 @@
 
     <section class="bloco_pagina">
 
-        <h2 class="titulo_conteudo"> Login </h2>
+        <h2 class="titulo_conteudo"> Crie uma receita </h2>
 
-        <form action="{{ url_for('usuario.login') }}" method="post">
+        <form action="{{ url_for('main.postar_receita') }}" method="post">
 
             <div class="form">
-                <label class="etiqueta_input" for="nome">Insira seu nome abaixo:</label>
-                <input class="entrada_dados" type="text" maxlength="20" name="nome" id="nome" placeholder="Seu nome aqui..." required>
+                <label class="etiqueta_input" for="titulo">Dê um título à sua receita:</label>
+                <input class="entrada_dados" type="text" maxlength="20" name="titulo" id="titulo" placeholder="Escreva o título aqui..." required>
             </div>
 
             <div class="form">
-                <label class="etiqueta_input" for="senha">Insira sua senha abaixo:</label>
-                <input class="entrada_dados" type="password" maxlength="20" name="senha" id="senha" placeholder="Sua senha aqui..." required>
+                <label class="etiqueta_input" for="receita">Escreva sua receita abaixo:</label>
+                <textarea class="area_de_texto" name="receita" id="receita" cols="80" rows="30" required>
+                    Escreva sua receita aqui!
+                    
+                </textarea>
             </div>
 
-            <button class="botao"> Entrar </button>
+            <button class="botao"> Postar receita </button>
 
         </form>
 
@@ -50,5 +54,6 @@
         </a>
 
     </section>
+
 
 {% endblock %}

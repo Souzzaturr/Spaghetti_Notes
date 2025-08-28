@@ -16,6 +16,9 @@ body {
 .cabecalho {
     padding: 1em 0;
     background: linear-gradient(45deg, #ffd900, #fac30e);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     grid-row: 1/2;
 }
 
@@ -115,6 +118,10 @@ main {
     text-wrap: wrap;
 }
 
+.nome_cabecalho {
+    padding: 0.5em;
+}
+
 .botao {
     padding: 1em 2em;
     margin: 2em 0;
@@ -144,7 +151,13 @@ main {
     text-align: center;
 }
 
-input {
+.centralizar_bloco {
+    justify-content: center;
+    justify-self: center;
+    text-align: center;
+}
+
+.entrada_dados {
     padding: 1em 3em;
     border: rgba(0, 0, 0, 0.212) solid 1px;
     border-radius: 0.5em;
@@ -157,6 +170,14 @@ input {
     display: flex;
     flex-direction: column;
     row-gap: 2em;
+}
+
+.area_de_texto {
+    border: rgba(0, 0, 0, 0.212) solid 1px;
+    border-radius: 0.5em;
+    width: 70%;
+    color: #757587;
+    padding: 1em;
 }
 
 .success {
