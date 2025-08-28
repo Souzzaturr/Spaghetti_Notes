@@ -72,6 +72,7 @@ main {
     border-radius: 0.5em;
     width: 80%;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.158);
+    min-height: 28em;
 }
 
 .titulo_conteudo {
@@ -147,6 +148,7 @@ main {
     border: rgb(207, 207, 187) solid 2px;
     border-radius: 0.5em;
     width: 200px;
+    height: 14em;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.158);
 }
 
