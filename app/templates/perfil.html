@@ -34,7 +34,7 @@
                         <h3 class="titulo_conteudo">{{ titulo[:10].replace("bR3@klIn3z", " ") + "..." }}</h3>
 
                         {% for linha in conteudo[:48].split("bR3@klIn3z") %} 
-                            <p>{{ linha }}</p>
+                            <p class="conteudo">{{ linha }}</p>
                         {% endfor %}
 
                         <p>{{ usuario }}</p>
