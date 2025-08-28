@@ -4,7 +4,7 @@
 
 def tratar_texto_post (texto: str) -> str:
     texto_tratado = texto.replace("\r\n", "\n")
-    texto_tratado = texto_tratado.replace(",", ";;").replace("\n", "bR3@klIn3z")
+    texto_tratado = texto_tratado.replace(",", ";;").replace("\n", " bR3@klIn3z ")
 
     return texto_tratado
 
