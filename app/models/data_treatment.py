@@ -1,6 +1,4 @@
-
-
-#---
+#funcoes de tratamento de texto
 
 def tratar_texto_post (texto: str) -> str:
     texto_tratado = texto.replace("\r\n", "\n")
@@ -19,3 +17,16 @@ def reverter_tratamento_texto_post (texto_tratado: str) -> str:
 
 #---
 
+def remover_espacos (texto: str) -> str:
+    
+    texto2 = texto[0]
+
+    for i in range(1, len(texto[1:])):
+
+        if texto[i] == " " and texto[i - 1] != " ":
+            texto2 = texto2 + texto[i]
+        
+        else:
+            texto2 = texto2 + texto[i]
+    
+    return texto2.strip()

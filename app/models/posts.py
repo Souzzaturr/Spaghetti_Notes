@@ -97,13 +97,15 @@ def posts_por_usuario () -> dict:
 
     usuarios = dict()
 
-    for nome in users.listar_usuarios():
-        usuarios[nome] = 0
+    if users.listar_usuarios():
 
-    with open("data/posts_data.csv", "r", encoding = "UTF-8") as posts_data:
+        for nome in users.listar_usuarios():
+            usuarios[nome] = 0
 
-        for post in posts_data.read().splitlines()[1:]:
+        with open("data/posts_data.csv", "r", encoding = "UTF-8") as posts_data:
 
-            usuarios[post.split(",")[2]] += 1
+            for post in posts_data.read().splitlines()[1:]:
+
+                usuarios[post.split(",")[2]] += 1
     
     return usuarios

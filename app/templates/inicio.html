@@ -30,11 +30,13 @@
                 <a class = "link" href=" {{ url_for('main.receita', titulo = titulo, conteudo = conteudo, usuario = usuario) }}">
                     <div class="unidade_bloco">
 
-                        <h3 class="titulo_conteudo">{{ titulo[:10].replace("bR3@klIn3z", " ") + "..." }}</h3>
+                        <h3 class="titulo_conteudo">{{ titulo[:18].replace("bR3@klIn3z", " ") }}</h3>
 
-                        {% for linha in conteudo[:48].split("bR3@klIn3z") %} 
-                            <p class="conteudo">{{ linha }}</p>
-                        {% endfor %}
+                        <div class="conteudo_unidade_bloco">
+                            {% for linha in (conteudo[:48] + "...").split("bR3@klIn3z") %} 
+                                <p>{{ linha }}</p>
+                            {% endfor %}
+                        </div>
 
                         <p>{{ usuario }}</p>
 
