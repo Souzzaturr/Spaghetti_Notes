@@ -156,6 +156,10 @@ main {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.158);
 }
 
+.conteudo_unidade_bloco {
+    word-wrap: break-word;
+}
+
 .mensagem_central {
     justify-self: center;
     text-align: center;
