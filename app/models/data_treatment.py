@@ -23,8 +23,10 @@ def remover_espacos (texto: str) -> str:
 
     for i in range(1, len(texto[1:])):
 
-        if texto[i] == " " and texto[i - 1] != " ":
-            texto2 = texto2 + texto[i]
+        if texto[i] == " ":
+            
+            if texto[i - 1] != " ":
+                texto2 = texto2 + texto[i]
         
         else:
             texto2 = texto2 + texto[i]
