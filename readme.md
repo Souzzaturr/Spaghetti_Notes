@@ -1,7 +1,9 @@
 # 🍝 Spaghetti Notes
 
+<img src="app/static/imgs/inicial_spahettinotes.png" alt="Página inicial" width='700'>
+
 ## 📖 Introdução  
-Este projeto foi desenvolvido para as disciplinas de **Programação para Web I** e **Introdução a Algoritmos**, do curso de Bacharelado em **Engenharia de Software** do **IFPB** com o objetivo de aplicar na prática os conceitos fundamentais de desenvolvimento web, organização de código e estruturação de aplicações dinâmicas.  
+Este projeto foi desenvolvido para o projeto final das disciplinas de **Programação para Web I** e **Introdução a Algoritmos**, do curso de Bacharelado em **Engenharia de Software** do **IFPB** com o objetivo de aplicar na prática os conceitos fundamentais de desenvolvimento web, organização de código e estruturação de aplicações dinâmicas.  
 A aplicação proposta consiste em um site de receitas, funcionando de forma semelhante a um blog, no qual usuários podem interagir e compartilhar conteúdos.
 
 ---
